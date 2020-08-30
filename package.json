@@ -10,8 +10,9 @@
 	"icon": "resources/logo.png",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/Ha2ryZhang/hotsearch"
+		"url": "https://github.com/Ha2ryZhang/hotsearch"
 	},
+	"homepage": "https://github.com/Ha2ryZhang/hotsearch/blob/master/README.md",
 	"categories": [
 		"Other"
 	],
