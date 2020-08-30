@@ -2,10 +2,15 @@
 
 This plugin currently only provides the top trending posts on Weibo。
 
+> 专业摸鱼100年。
+
+## Install
+
 **VSCode Extensions search hotsearch and install it**
 
 **you can also follow the [link](https://marketplace.visualstudio.com/items?itemName=harryzhang.hotsearch) to install this extensions**
-> 专业摸鱼100年。
+
+### [Marketplace](https://marketplace.visualstudio.com/items?itemName=harryzhang.hotsearch)
 
 ## Features
 
