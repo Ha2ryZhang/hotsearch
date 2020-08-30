@@ -8,6 +8,10 @@ This plugin currently only provides the top trending posts on Weibo
 
 It might be something new. Let me know if you have any ideas.
 
+## Issue
+
+- 在macos来开链接可能会多个`%25`
+
 ## Requirements
 
 - axios: http client

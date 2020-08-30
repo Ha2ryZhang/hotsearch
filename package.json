@@ -7,7 +7,7 @@
 	"engines": {
 		"vscode": "^1.48.0"
 	},
-	"icon": "media/logo.png",
+	"icon": "resources/logo.png",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/Ha2ryZhang/hotsearch"
@@ -17,7 +17,6 @@
 	],
 	"activationEvents": [
 		"onCommand:hotsearch.refresh",
-		"onCommand:hotsearch.open",
 		"onView:rank"
 	],
 	"main": "./out/extension.js",
