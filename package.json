@@ -1,0 +1,111 @@
+{
+	"name": "hotsearch",
+	"displayName": "HotSearch",
+	"description": "the hot search rank of weibo",
+	"version": "1.0.0",
+	"publisher": "harryzhang",
+	"engines": {
+		"vscode": "^1.48.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:hotsearch.refresh",
+		"onView:rank"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "weibo-hot-search",
+					"title": "HotSearch",
+					"icon": "media/logo.svg"
+				}
+			]
+		},
+		"views": {
+			"weibo-hot-search": [
+				{
+					"id": "rank",
+					"name": "热搜榜"
+				}
+			]
+		},
+		"commands": [
+			{
+				"command": "hotsearch.refresh",
+				"title": "Refresh",
+				"icon": "src/assert/refresh.svg"
+			},
+			{
+				"command": "hotsearch.github",
+				"title": "GitHub"
+			},
+			{
+				"command": "hotsearch.open",
+				"title": "Open With Browser",
+				"icon": "src/assert/link.svg"
+			},
+			{
+				"command": "hotsearch.copyUrl",
+				"title": "Copy Link"
+			}
+		],
+		"menus": {
+			"view/title": [
+				{
+					"command": "hotsearch.refresh",
+					"when": "view == rank",
+					"group": "navigation"
+				},
+				{
+					"command": "hotsearch.github",
+					"when": "view == rank"
+				}
+			],
+			"view/item/context": [
+				{
+					"command": "hotsearch.open",
+					"when": "view == rank",
+					"group": "inline"
+				},
+				{
+					"command": "hotsearch.open",
+					"when": "view == rank"
+				},
+				{
+					"command": "hotsearch.copyUrl",
+					"when": "view == rank"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint src --ext ts",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.48.0",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.0",
+		"@types/node": "^14.0.27",
+		"eslint": "^7.6.0",
+		"@typescript-eslint/eslint-plugin": "^3.8.0",
+		"@typescript-eslint/parser": "^3.8.0",
+		"glob": "^7.1.6",
+		"mocha": "^8.0.1",
+		"typescript": "^3.8.3",
+		"vscode-test": "^1.4.0"
+	},
+	"dependencies": {
+		"@types/open": "^6.2.1",
+		"axios": "^0.19.0",
+		"open": "^7.2.1"
+	}
+}
