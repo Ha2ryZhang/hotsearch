@@ -15,7 +15,7 @@ export function activate(context: vscode.ExtensionContext) {
 		vscode.commands.registerCommand(
 			"hotsearch.open",
 			async (rank: RankItem) => {
-				await open(rank.url);
+				await open(rank.url.toString());
 			}
 		)
 	);
@@ -28,7 +28,14 @@ export function activate(context: vscode.ExtensionContext) {
 			}
 		)
 	);
-
+	context.subscriptions.push(
+		vscode.commands.registerCommand(
+			"hotsearch.github",
+			async () => {
+				await open("https://github.com/Ha2ryZhang/hotsearch");
+			}
+		)
+	);
 }
 
 export function deactivate() { }

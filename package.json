@@ -17,6 +17,7 @@
 	],
 	"activationEvents": [
 		"onCommand:hotsearch.refresh",
+		"onCommand:hotsearch.open",
 		"onView:rank"
 	],
 	"main": "./out/extension.js",
@@ -26,7 +27,7 @@
 				{
 					"id": "weibo-hot-search",
 					"title": "HotSearch",
-					"icon": "media/logo.svg"
+					"icon": "resources/logo.svg"
 				}
 			]
 		},
@@ -42,7 +43,10 @@
 			{
 				"command": "hotsearch.refresh",
 				"title": "Refresh",
-				"icon": "media/refresh.svg"
+				"icon": {
+					"light": "resources/light/refresh.svg",
+					"dark": "resources/dark/refresh.svg"
+				}
 			},
 			{
 				"command": "hotsearch.github",
@@ -51,7 +55,10 @@
 			{
 				"command": "hotsearch.open",
 				"title": "Open With Browser",
-				"icon": "media/link.png"
+				"icon": {
+					"light": "resources/light/link.svg",
+					"dark": "resources/dark/link.svg"
+				}
 			},
 			{
 				"command": "hotsearch.copyUrl",
@@ -71,6 +78,11 @@
 				}
 			],
 			"view/item/context": [
+				{
+					"command": "hotsearch.open",
+					"when": "view == rank",
+					"group": ""
+				},
 				{
 					"command": "hotsearch.open",
 					"when": "view == rank",

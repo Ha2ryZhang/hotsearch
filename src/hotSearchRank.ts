@@ -1,4 +1,4 @@
-import { TreeItem, EventEmitter, Event, TreeItemCollapsibleState, TreeDataProvider, window } from 'vscode';
+import { TreeItem, EventEmitter, Event, TreeItemCollapsibleState, TreeDataProvider, Command } from 'vscode';
 import * as path from 'path';
 import { getRankList } from "./api";
 
@@ -43,7 +43,6 @@ export class RankItem extends TreeItem {
 		];
 		return data.join('\r\n');
 	}
-
-	iconPath = path.join(__filename, '..', '..', 'media', 'item.svg');
+	iconPath = path.join(__filename, '..', '..', 'resources', 'item.svg');
 
 }
