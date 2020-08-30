@@ -2,16 +2,16 @@
 	"name": "hotsearch",
 	"displayName": "HotSearch",
 	"description": "the hot search rank of weibo",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"publisher": "harryzhang",
 	"engines": {
 		"vscode": "^1.48.0"
 	},
-	"icon":"media/logo.png",
+	"icon": "media/logo.png",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/Ha2ryZhang/hotsearch"
-	  },
+	},
 	"categories": [
 		"Other"
 	],
