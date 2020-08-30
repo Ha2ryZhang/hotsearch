@@ -42,7 +42,7 @@
 			{
 				"command": "hotsearch.refresh",
 				"title": "Refresh",
-				"icon": "src/assert/refresh.svg"
+				"icon": "media/refresh.svg"
 			},
 			{
 				"command": "hotsearch.github",
@@ -51,7 +51,7 @@
 			{
 				"command": "hotsearch.open",
 				"title": "Open With Browser",
-				"icon": "src/assert/link.png"
+				"icon": "media/link.png"
 			},
 			{
 				"command": "hotsearch.copyUrl",

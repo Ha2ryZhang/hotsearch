@@ -44,6 +44,6 @@ export class RankItem extends TreeItem {
 		return data.join('\r\n');
 	}
 
-	iconPath = path.join(__filename, '..', '..', 'src', 'assert', 'item.svg');
+	iconPath = path.join(__filename, '..', '..', 'media', 'item.svg');
 
 }
