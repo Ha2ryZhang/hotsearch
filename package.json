@@ -7,6 +7,11 @@
 	"engines": {
 		"vscode": "^1.48.0"
 	},
+	"icon":"media/logo.png",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Ha2ryZhang/hotsearch"
+	  },
 	"categories": [
 		"Other"
 	],
@@ -46,7 +51,7 @@
 			{
 				"command": "hotsearch.open",
 				"title": "Open With Browser",
-				"icon": "src/assert/link.svg"
+				"icon": "src/assert/link.png"
 			},
 			{
 				"command": "hotsearch.copyUrl",

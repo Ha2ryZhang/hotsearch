@@ -16,8 +16,6 @@ It might be something new. Let me know if you have any ideas.
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
 ### 1.0.0
 
 Initial Project
