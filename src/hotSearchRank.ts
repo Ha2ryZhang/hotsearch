@@ -1,6 +1,7 @@
 import { TreeItem, EventEmitter, Event, TreeItemCollapsibleState, TreeDataProvider, Command } from 'vscode';
 import * as path from 'path';
 import { getRankList } from "./api";
+import * as os from "os";
 
 export class RankViewProvider implements TreeDataProvider<RankItem>{
 
@@ -32,7 +33,15 @@ export class RankItem extends TreeItem {
 	}
 
 	get url(): string {
-		return `https://s.weibo.com/weibo?q=%23${this.item.name}%23`;
+		let platform = os.platform();
+		if (platform === "win32") {
+			return `https://s.weibo.com/weibo?q=%23${this.item.name}%23`;
+		} else if (platform === "darwin") {
+			//macos 默认会转义
+			return `https://s.weibo.com/weibo?q=#${this.item.name}#`;
+		} else {
+			return `https://s.weibo.com/weibo?q=%23${this.item.name}%23`;
+		}
 	}
 
 	get tooltip(): string {

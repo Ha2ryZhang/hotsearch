@@ -18,8 +18,8 @@ It might be something new. Let me know if you have any ideas.
 
 ## Issue
 
-- 在macos打开链接可能会多个 `%25` 暂时不知原因
-
+- 在macos打开链接可能会多个 `%25` 暂时不知原因 fixed
+原因:貌似`macos`会自动转义特殊字符 比如 `%` => `%25` ,而 `windows` 不会, linux 暂时不知。
 ## Requirements
 
 - axios: http client
