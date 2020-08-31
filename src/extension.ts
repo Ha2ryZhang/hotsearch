@@ -1,6 +1,7 @@
 import * as vscode from 'vscode';
 import { RankViewProvider, RankItem } from './hotSearchRank';
 import * as open from "open";
+import { createWebView } from './webview';
 
 export function activate(context: vscode.ExtensionContext) {
 
@@ -36,6 +37,11 @@ export function activate(context: vscode.ExtensionContext) {
 			}
 		)
 	);
+	context.subscriptions.push(vscode.commands.registerCommand('hotsearch.rankItemClick', (rank:RankItem) => {
+		const webView = createWebView(context, vscode.ViewColumn.Active, rank);
+		context.subscriptions.push(webView);
+	}));
+
 }
 
 export function deactivate() { }

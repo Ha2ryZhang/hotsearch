@@ -18,7 +18,8 @@
 	],
 	"activationEvents": [
 		"onCommand:hotsearch.refresh",
-		"onView:rank"
+		"onView:rank",
+		"onCommand:hotsearch.rankItemClick"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -53,6 +54,10 @@
 				"title": "GitHub"
 			},
 			{
+				"command": "hotsearch.rankItemClick",
+				"title": "View In Vscode"
+			},
+			{
 				"command": "hotsearch.open",
 				"title": "Open With Browser",
 				"icon": {
@@ -81,12 +86,11 @@
 				{
 					"command": "hotsearch.open",
 					"when": "view == rank",
-					"group": ""
+					"group": "inline"
 				},
 				{
-					"command": "hotsearch.open",
-					"when": "view == rank",
-					"group": "inline"
+					"command": "hotsearch.rankItemClick",
+					"when": "view == rank"
 				},
 				{
 					"command": "hotsearch.open",

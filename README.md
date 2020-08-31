@@ -32,4 +32,7 @@ It might be something new. Let me know if you have any ideas.
 
 Initial Project
 
+### 1.0.7
+add a webview to display in vscode
+
 ## Enjoy! DO NOT TOUCH FISH.

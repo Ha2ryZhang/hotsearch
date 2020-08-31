@@ -32,6 +32,16 @@ export class RankItem extends TreeItem {
 		super(item.name, collapsibleState);
 	}
 
+	get command(): Command {
+		return {
+			command: "hotsearch.rankItemClick",
+			title: '',
+			arguments: [                
+				this         
+			]
+		};
+	}
+
 	get url(): string {
 		let platform = os.platform();
 		if (platform === "win32") {
