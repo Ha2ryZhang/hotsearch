@@ -2,7 +2,7 @@
 	"name": "hotsearch",
 	"displayName": "HotSearch",
 	"description": "the hot search rank of weibo",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"publisher": "harryzhang",
 	"engines": {
 		"vscode": "^1.41.0"
