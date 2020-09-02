@@ -2,6 +2,8 @@
 
 This plugin currently only provides the top trending posts on Weibo。
 
+![预览](./resources/pre.png)
+
 > 专业摸鱼100年。
 
 ## Install
